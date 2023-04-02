@@ -1,16 +1,16 @@
 <%= turbo_frame_tag post do %>
   <div class='container'>
     <div class='field is-grouped box columns'>
-      <div class='column'>
+      <div class='column is-8'>
         <%= post.text %>
       </div>
-      <div class='column'>
+      <div class='column is-2'>
         <%= link_to "Edit",
           edit_post_path(post),
           class: 'button is-small is-light is-link'
         %>
       </div>
-      <div class='column'>
+      <div class='column is-2'>
         <%= link_to 'Destroy',
           post, data: {
             turbo_method: :delete,

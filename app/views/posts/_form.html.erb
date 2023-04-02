@@ -12,11 +12,11 @@
   <% end %>
 
   <%= turbo_frame_tag post do %>
-    <div class='field columns'>
-      <div class='control column'>
+    <div class='field columns p-5'>
+      <div class='control column is-8'>
         <%= form.text_field :text, class: 'input' %>
       </div>
-      <div class='control column'>
+      <div class='control column is-2'>
         <%= form.submit class: 'button is-link is-small is-light',
           data: {
             controller: "modals",
@@ -24,7 +24,7 @@
           }
         %>
       </div>
-      <div class='control column'>
+      <div class='control column is-2'>
         <%= link_to "Cancel",
           posts_path,
           class: 'button is-danger is-light is-small',
