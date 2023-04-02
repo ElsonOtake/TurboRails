@@ -22,12 +22,15 @@
     <% end %>
   <% end %>
 </div>
+
+<%# Create bulma modal %>
+
 <div id="modal-js-example" class="modal">
   <div class="modal-background"></div>
 
   <div class="modal-content">
     <div class="box">
-      <h2>Create modal</h2>
+      <h2>Create new post</h2>
       <%= turbo_frame_tag 'new_post' %>
     </div>
   </div>
