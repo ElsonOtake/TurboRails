@@ -17,10 +17,22 @@
         <%= form.text_field :text, class: 'input' %>
       </div>
       <div class='control column'>
-        <%= form.submit class: 'button is-link is-small is-light', data: { controller: "modals", action: "modals#close_modal"} %>
+        <%= form.submit class: 'button is-link is-small is-light',
+          data: {
+            controller: "modals",
+            action: "modals#close_modal"
+          }
+        %>
       </div>
       <div class='control column'>
-        <%= link_to "Cancel", posts_path, class: 'button is-danger is-light is-small', data: { controller: "modals", action: "modals#close_modal"} %>
+        <%= link_to "Cancel",
+          posts_path,
+          class: 'button is-danger is-light is-small',
+          data: {
+            controller: "modals",
+            action: "modals#close_modal"
+          }
+        %>
       </div>
     </div>
   <% end %>
