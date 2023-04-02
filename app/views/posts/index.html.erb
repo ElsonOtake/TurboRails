@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p>
+<div class='p-5'>
+  <div class='columns'>
+    <h1 class='column'>Posts</h1>
+
+    <%= link_to "New post",
+      new_post_path,
+      data: { 
+        turbo_frame: "new_post",
+        controller: "modals",
+        action: "modals#new"
+      },
+      class: 'button is-link is-small is-light column p-2'
+    %>
+
+  </div>
+
+  <%= turbo_frame_tag "posts" do %>
+    <%#= render @posts %>
+    <% @posts.each do |post| %>
+      <%= render 'posts/post', post: post %>
+    <% end %>
+  <% end %>
+</div>
+<div id="modal-js-example" class="modal">
+  <div class="modal-background"></div>
+
+  <div class="modal-content">
+    <div class="box">
+      <h2>Create modal</h2>
+      <%= turbo_frame_tag 'new_post' %>
+    </div>
+  </div>
+
+  <%= link_to "Cancel", nil, class: "modal-close is-small is-light is-danger" %>
+</div>

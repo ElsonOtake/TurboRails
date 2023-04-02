@@ -1,0 +1,13 @@
+<%= turbo_frame_tag post do %>
+  <div class='container'>
+    <div class='field is-grouped box columns'>
+      <div class='column'><%= post.text %></div>
+      <div class='column'><%= link_to "Edit", edit_post_path(post), class: 'button is-small is-light is-link' %></div>
+      <div class='column'><%= link_to 'Destroy', post, data:
+        {
+          turbo_method: :delete,
+          turbo_confirm: 'Are you sure?'
+        }, class: 'button is-small is-light is-danger' %></div>
+    </div>
+  </div>
+<% end %>

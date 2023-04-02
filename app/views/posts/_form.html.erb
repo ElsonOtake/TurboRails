@@ -1,0 +1,26 @@
+  <%= form_with(model: post) do |form| %>
+    <% if post.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+          <% post.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%#= turbo_frame_tag post do %>
+    <div class='field columns'>
+      <div class='control column'>
+        <%= form.text_field :text, class: 'input' %>
+      </div>
+      <div class='control column'>
+        <%= link_to "Cancel", posts_path, class: 'button is-danger is-light is-small', data: { controller: "modals", action: "modals#close_modal"} %>
+      </div>
+      <div class='control column'>
+        <%= form.submit class: 'button is-link is-small is-light', data: { controller: "modals", action: "modals#close_modal"} %>
+      </div>
+    </div>
+  <%# end %>
+<% end %>
