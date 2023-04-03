@@ -8,9 +8,9 @@
       data: { 
         turbo_frame: "new_post",
         controller: "modals",
-        action: "modals#new"
+        action: "modals#new_post"
       },
-      class: 'button is-link is-small is-light p-2'
+      class: 'button is-link is-small is-link p-2'
     %>
 
   </div>
@@ -28,8 +28,9 @@
 
   <div class="modal-content">
     <div class="box">
-      <h2>Create new post</h2>
+      <h2 class="title has-text-info has-text-centered">Create new post</h2>
       <%= turbo_frame_tag 'new_post' %>
+      <p class="has-text-danger-dark pl-5"><%= "\u00A9" %> Copyright Elson Corporation 2023</p>
     </div>
   </div>
 
