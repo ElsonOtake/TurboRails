@@ -25,6 +25,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
+        UserMailer.with(user: current_user, post: @post).welcome_email.deliver_later
         format.html { redirect_to post_url(@post), notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @post }
         format.turbo_stream
