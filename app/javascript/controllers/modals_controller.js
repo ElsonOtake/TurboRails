@@ -1,6 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="modals"
 export default class extends Controller {
   
   openModal(el) {
@@ -18,11 +17,10 @@ export default class extends Controller {
   }
 
   initialize() {
-    const close_option = document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button');
+    const close_option = document.querySelectorAll('.modal-background, .modal-close');
     (close_option || []).forEach((close) => {
       const target = close.closest('.modal');
       close.addEventListener('click', () => {
-        // target.classList.remove('is-active');
         this.closeModal(target);
       });
     });
@@ -37,12 +35,12 @@ export default class extends Controller {
   }
 
   new_post() {
-    const target = document.getElementById("modal-js-example");
+    const target = document.getElementById("modal-post");
     this.openModal(target);
   }
 
   close_modal() {
-    const target = document.getElementById("modal-js-example");
+    const target = document.getElementById("modal-post");
     this.closeModal(target);
   }
 
