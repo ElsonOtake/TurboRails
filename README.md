@@ -36,6 +36,8 @@
   <summary>Server</summary>
   <ul>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://stimulus.hotwired.dev/">Stimulus</a></li>
+    <li><a href="https://github.com/hotwired/turbo-rails">Turbo Rails</a></li>
     <li><a href="https://bulma.io/">Bulma</a></li>
     <li><a href="https://rubygems.org/gems/devise/">Devise</a></li>
   </ul>
