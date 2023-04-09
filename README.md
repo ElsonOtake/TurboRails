@@ -37,6 +37,7 @@
   <ul>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
     <li><a href="https://bulma.io/">Bulma</a></li>
+    <li><a href="https://rubygems.org/gems/devise/">Devise</a></li>
   </ul>
 </details>
 
@@ -52,8 +53,8 @@
 ### Key Features <a name="key-features"></a>
 
 - **Turbo frames**
-- **CRUD**
 - **Bulma modal**
+- **Action mailer**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -146,9 +147,8 @@ To generate the [API documentation](http://localhost:3000/api-docs/index.html):
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Action mailer**
 - [ ] **Active jobs**
-- [ ] **Notifications**
+- [ ] **Notice**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
