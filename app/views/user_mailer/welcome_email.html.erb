@@ -9,6 +9,10 @@
       You have successfully create a post to example.com,
       your post content: <%= @post.text %>.<br>
     </p>
+    <p>Hello there, this is our image</p>
+
+    <%= image_tag attachments['Puppy dog smiling.png'].url %>
+
     <p>
       To login to the site, just follow this link: <%= @url %>.
     </p>
