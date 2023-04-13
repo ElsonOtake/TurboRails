@@ -1,5 +1,5 @@
 <h1>Editing post</h1>
-<%= turbo_frame_tag @post do %>
+<%= turbo_frame_tag "update_post" do %>
   <%= render "form", post: @post %>
 <% end %>
 <br>
