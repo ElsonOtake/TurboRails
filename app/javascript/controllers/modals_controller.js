@@ -39,9 +39,15 @@ export default class extends Controller {
     this.openModal(target);
   }
 
+  update_post() {
+    const update_target = document.getElementById("modal-update");
+    this.openModal(update_target);
+  }
+  
   close_modal() {
+    const update_target = document.getElementById("modal-update");
     const target = document.getElementById("modal-post");
+    this.closeModal(update_target);
     this.closeModal(target);
   }
-
 }
