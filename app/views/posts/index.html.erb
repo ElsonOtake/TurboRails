@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <div class='p-5 columns is-justify-content-space-evenly'>
-    <div class='column is-narrow'>
+    <div class='column is-2'>
       <h1 class='title'>Posts</h1>
 
       <%= link_to "New post",
@@ -14,7 +14,7 @@
       %>
 
     </div>
-    <div class='column is-half'>
+    <div class='column'>
       <%= turbo_frame_tag "posts" do %>
         <%= render @posts %>
       <% end %>
