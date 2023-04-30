@@ -9,10 +9,7 @@
       <div class="control has-icons-left">
         <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "input", placeholder: "New password" %>
         <span class="icon is-small is-left">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="form_icon">
-            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-            <path fill="grey" d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/>
-          </svg>
+          <%= icon('fa-solid', 'lock') %>
         </span>
         <% if @minimum_password_length %>
           <em class="help has-text-danger">(<%= @minimum_password_length %> characters minimum)</em><br />
@@ -24,10 +21,7 @@
       <div class="control has-icons-left">
         <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input", placeholder: "Confirm new password" %>
         <span class="icon is-small is-left">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="form_icon">
-            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-            <path fill="grey" d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/>
-          </svg>
+          <%= icon('fa-solid', 'lock') %>
         </span>
       </div>
     </div>
