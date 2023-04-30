@@ -1,10 +1,10 @@
 <%= turbo_frame_tag post do %>
   <div class='container'>
-    <div class='field is-grouped box columns'>
-      <div class='column is-9'>
+    <div class='box columns'>
+      <div class='column'>
         <%= post.text %>
       </div>
-      <div class='column'>
+      <div class='column is-narrow'>
         <%= link_to "Edit post",
           edit_post_path(post),
           data: { 
@@ -12,16 +12,32 @@
             controller: "modals",
             action: "modals#update_post"
           },
-          class: 'button is-small is-light is-link is-outlined'
+          class: 'button is-small is-light is-link is-outlined is-hidden-touch'
+        %>
+        <%= link_to icon('fa-solid', 'pen', class: 'has-text-cyan'),
+          edit_post_path(post),
+          data: { 
+            turbo_frame: "update_post",
+            controller: "modals",
+            action: "modals#update_post"
+          },
+          class: 'is-hidden-desktop'
         %>
       </div>
-      <div class='column'>
+      <div class='column is-narrow'>
         <%= link_to 'Delete post',
           post, data: {
             turbo_method: :delete,
             turbo_confirm: 'Are you sure?'
           },
-          class: 'button is-small is-light is-danger is-outlined'
+          class: 'button is-small is-light is-danger is-outlined is-hidden-touch'
+        %>
+        <%= link_to icon('fa-solid', 'trash', class: 'has-text-danger'),
+          post, data: {
+            turbo_method: :delete,
+            turbo_confirm: 'Are you sure?'
+          },
+          class: 'is-hidden-desktop'
         %>
       </div>
     </div>
