@@ -1,51 +1,55 @@
-<div class='p-5 columns is-justify-content-space-evenly'>
-  <div class='column is-narrow'>
-    <h1 class='title'>Posts</h1>
+<% if user_signed_in? %>
+  <div class='p-5 columns is-justify-content-space-evenly'>
+    <div class='column is-narrow'>
+      <h1 class='title'>Posts</h1>
 
-    <%= link_to "New post",
-      new_post_path,
-      data: { 
-        turbo_frame: "new_post",
-        controller: "modals",
-        action: "modals#new_post"
-      },
-      class: 'button is-link is-small is-link p-2'
-    %>
+      <%= link_to "New post",
+        new_post_path,
+        data: { 
+          turbo_frame: "new_post",
+          controller: "modals",
+          action: "modals#new_post"
+        },
+        class: 'button is-link is-small is-link p-2'
+      %>
 
-  </div>
-  <div class='column is-half'>
-    <%= turbo_frame_tag "posts" do %>
-      <%= render @posts %>
-    <% end %>
-  </div>
-</div>
-
-<%# Create bulma modal %>
-
-<div id="modal-post" class="modal">
-  <div class="modal-background"></div>
-
-  <div class="modal-content">
-    <div class="box">
-      <h2 class="title has-text-info has-text-centered">Create new post</h2>
-      <%= turbo_frame_tag 'new_post' %>
-      <p class="has-text-danger-dark pl-5"><%= "\u00A9" %> Copyright Elson Corporation 2023</p>
+    </div>
+    <div class='column is-half'>
+      <%= turbo_frame_tag "posts" do %>
+        <%= render @posts %>
+      <% end %>
     </div>
   </div>
 
-  <%= link_to "Cancel", nil, class: "modal-close is-small is-light is-danger" %>
-</div>
+  <%# Create bulma modal %>
 
-<div id="modal-update" class="modal">
-  <div class="modal-background"></div>
+  <div id="modal-post" class="modal">
+    <div class="modal-background"></div>
 
-  <div class="modal-content">
-    <div class="box">
-      <h2 class="title has-text-info has-text-centered">Update post</h2>
-      <%= turbo_frame_tag "update_post" %>
-      <p class="has-text-danger-dark pl-5"><%= "\u00A9" %> Copyright Elson Corporation 2023</p>
+    <div class="modal-content">
+      <div class="box">
+        <h2 class="title has-text-info has-text-centered">Create new post</h2>
+        <%= turbo_frame_tag 'new_post' %>
+        <p class="has-text-danger-dark pl-5"><%= "\u00A9" %> Copyright Elson Corporation 2023</p>
+      </div>
     </div>
+
+    <%= link_to "Cancel", nil, class: "modal-close is-small is-light is-danger" %>
   </div>
 
-  <%= link_to "Cancel", nil, class: "modal-close is-small is-light is-danger" %>
-</div>
+  <div id="modal-update" class="modal">
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <div class="box">
+        <h2 class="title has-text-info has-text-centered">Update post</h2>
+        <%= turbo_frame_tag "update_post" %>
+        <p class="has-text-danger-dark pl-5"><%= "\u00A9" %> Copyright Elson Corporation 2023</p>
+      </div>
+    </div>
+
+    <%= link_to "Cancel", nil, class: "modal-close is-small is-light is-danger" %>
+  </div>
+<% else %>
+  <h1 class='title has-text-info'>Please sign in</h1>
+<% end %>
