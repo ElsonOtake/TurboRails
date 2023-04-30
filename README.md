@@ -33,12 +33,19 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://bulma.io/">Bulma</a></li>
+    <li><a href="https://fontawesome.com/">Font Awesome</a></li>
+  </ul>
+</details>
+
+<details>
   <summary>Server</summary>
   <ul>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
     <li><a href="https://stimulus.hotwired.dev/">Stimulus</a></li>
     <li><a href="https://github.com/hotwired/turbo-rails">Turbo Rails</a></li>
-    <li><a href="https://bulma.io/">Bulma</a></li>
     <li><a href="https://rubygems.org/gems/devise/">Devise</a></li>
   </ul>
 </details>
