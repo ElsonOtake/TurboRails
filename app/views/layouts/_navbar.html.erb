@@ -21,7 +21,7 @@
 
   <div id="navMenu" class="navbar-menu">
     <div class="navbar-end">
-      <div class="navbar-item">
+      <div class="navbar-item is-hidden-touch">
         <div class="buttons">
           <% if user_signed_in? %>
             <%= link_to "Edit user", edit_user_registration_path, class: "button is-link is-outlined" %>
@@ -31,6 +31,20 @@
             <%= link_to "Log in", new_user_session_path, class: "button is-info is-outlined" %>
           <% end %>
         </div>
+      </div>
+      <div class="navbar-items is-hidden-desktop px-4">
+          <% if user_signed_in? %>
+            <%= link_to "Edit user", edit_user_registration_path, class: "is-link" %>
+          <% else %>
+            <%= link_to "Sign Up", new_user_registration_path, class: "is-link" %>
+          <% end %>
+      </div>
+      <div class="navbar-items is-hidden-desktop px-4">
+          <% if user_signed_in? %>
+            <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "is-danger navbar-logout" %>
+          <% else %>
+            <%= link_to "Log in", new_user_session_path, class: "is-info" %>
+          <% end %>
       </div>
     </div>
   </div>
