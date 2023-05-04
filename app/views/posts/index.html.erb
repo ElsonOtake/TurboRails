@@ -35,29 +35,11 @@
   <%# Create bulma modal %>
 
   <div id="modal-post" class="modal">
-    <div class="modal-background"></div>
-
-    <div class="modal-content">
-      <div class="box">
-        <%= turbo_frame_tag 'new_post' %>
-        <p class="has-text-danger-dark pl-5"><%= "\u00A9" %> Copyright Elson Corporation 2023</p>
-      </div>
-    </div>
-
-    <%= link_to "Cancel", nil, class: "modal-close is-small is-light is-danger" %>
+    <%= render 'shared/modal', tag_name: 'new_post' %>
   </div>
 
   <div id="modal-update" class="modal">
-    <div class="modal-background"></div>
-
-    <div class="modal-content">
-      <div class="box">
-        <%= turbo_frame_tag "update_post" %>
-        <p class="has-text-danger-dark pl-5"><%= "\u00A9" %> Copyright Elson Corporation 2023</p>
-      </div>
-    </div>
-
-    <%= link_to "Cancel", nil, class: "modal-close is-small is-light is-danger" %>
+    <%= render 'shared/modal', tag_name: 'update_post' %>
   </div>
 <% else %>
   <h1 class='title has-text-info'>Please sign in</h1>
