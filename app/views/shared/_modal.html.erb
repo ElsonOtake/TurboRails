@@ -1,0 +1,10 @@
+<div class="modal-background"></div>
+
+<div class="modal-content">
+  <div class="box">
+    <%= turbo_frame_tag tag_name %>
+    <p class="has-text-danger-dark pl-5"><%= "\u00A9" %> Copyright Elson Corporation 2023</p>
+  </div>
+</div>
+
+<%= link_to "Cancel", nil, class: "modal-close is-small is-light is-danger" %>
