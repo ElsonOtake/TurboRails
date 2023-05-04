@@ -1,5 +1,6 @@
 <h1>Editing post</h1>
 <%= turbo_frame_tag "update_post" do %>
+  <h2 class="title has-text-info has-text-centered">Update post</h2>
   <%= render "form", post: @post %>
 <% end %>
 <br>
