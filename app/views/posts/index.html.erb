@@ -15,8 +15,8 @@
 
     </div>
     <div class='column'>
-      <div class='container box'>
-        <table class='table'>
+      <div class='container'>
+        <table class='table box'>
           <thead>
             <tr>
               <th>Post</th>
@@ -24,10 +24,8 @@
               <th></th>
             </tr>
           </thead>
-          <tbody>
-            <%= turbo_frame_tag "posts" do %>
-              <%= render @posts %>
-            <% end %>
+          <tbody id='posts' is='turbo-frame'>
+            <%= render @posts %>
           </tbody>
         </table>
       </div>          
