@@ -15,9 +15,22 @@
 
     </div>
     <div class='column'>
-      <%= turbo_frame_tag "posts" do %>
-        <%= render @posts %>
-      <% end %>
+      <div class='container box'>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Post</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= turbo_frame_tag "posts" do %>
+              <%= render @posts %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>          
     </div>
   </div>
 
