@@ -27,7 +27,6 @@ export default class extends Controller {
 
     document.addEventListener('keydown', (event) => {
       const e = event || window.event;
-      console.log("pressed key", e.key)
       if (e.key == "Escape") { // Escape key
         this.closeAllModals();
       }
