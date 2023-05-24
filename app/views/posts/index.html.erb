@@ -8,7 +8,7 @@
         data: { 
           turbo_frame: "new_post",
           controller: "stimulus",
-          stimulus_id_value: "modal-post",
+          stimulus_id_value: "post_new",
           action: "stimulus#open"
         },
         class: 'button is-link is-small is-link p-2'
@@ -34,9 +34,9 @@
   </div>
 
   <%# Create bulma modal %>
-  <%= render 'shared/modal', tag_name: 'new_post', id_name: "modal-post" %>
-  <%= render 'shared/modal', tag_name: 'update_post', id_name: "modal-update" %>
-  
+  <%= render 'shared/modal', tag_name: 'new_post', id_name: "post_new" %>
+  <%= render 'shared/modal', tag_name: 'update_post', id_name: "post_update" %>
+
 <% else %>
   <h1 class='title has-text-info'>Please sign in</h1>
 <% end %>
