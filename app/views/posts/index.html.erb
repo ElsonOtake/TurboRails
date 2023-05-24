@@ -34,14 +34,9 @@
   </div>
 
   <%# Create bulma modal %>
-
-  <div id="modal-post" class="modal">
-    <%= render 'shared/modal', tag_name: 'new_post' %>
-  </div>
-
-  <div id="modal-update" class="modal">
-    <%= render 'shared/modal', tag_name: 'update_post' %>
-  </div>
+  <%= render 'shared/modal', tag_name: 'new_post', id_name: "modal-post" %>
+  <%= render 'shared/modal', tag_name: 'update_post', id_name: "modal-update" %>
+  
 <% else %>
   <h1 class='title has-text-info'>Please sign in</h1>
 <% end %>
