@@ -49,23 +49,6 @@ export default class extends Controller {
     }
   }
 
-  new_post() {
-    const target = document.getElementById("modal-post");
-    this.openModal(target);
-  }
-
-  update_post() {
-    const update_target = document.getElementById("modal-update");
-    this.openModal(update_target);
-  }
-  
-  close_modal() {
-    const update_target = document.getElementById("modal-update");
-    const target = document.getElementById("modal-post");
-    this.closeModal(update_target);
-    this.closeModal(target);
-  }
-
   burger() {
     const burger = document.querySelector(".navbar-burger");
     const nav = document.querySelector("#"+burger.dataset.target);
